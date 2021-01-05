@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+	     <title>Inicio</title>
+	  </h:head>
+	  
+	  <h:body>
+	  <p:panel>
+	  <f:facet name="header">
+	  <p:outputLabel value="Información básica"></p:outputLabel>
+	  </f:facet>
+	  
+	  <h:form id="form">  
+    <p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true" />
+    
+    
+ 
+    <!--  <h3 style="margin-top:0">Basic1</h3> -->
+    <p:accordionPanel>
+        <p:tab title="Breve historia de los videojuegos">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage url="photos\1.jpg" width="200px" height="150px" />
+                <h:outputText
+                    value="Para bien o para mal, en la época contemporánea los juegos tradicionales han sido ampliamente reemplazados por los juegos de video. La historia de los videojuegos comienza en firme en la década de 1960, cuando comenzaron a aparecer los primeros prototipos." />
+            
+            <p:graphicImage url="photos\2.jpg" width="200px" height="150px" />
+                <h:outputText
+                    value="En 1961 apareció Spacewar!, desarrollado por tres estudiantes del Instituto Tecnológico de Massachusetts. A partir de entonces comenzaron a aparecer juegos similares cada vez más complejos. En muy poco tiempo aparecieron las primeras consolas arcade que funcionaban con monedas, en bares, discotecas, pubs, etc." />
+           
+            
+            <p:graphicImage url="photos\3.jfif" width="200px" height="150px" />
+                <h:outputText
+                    value="En 1968 nace la primera consola de videojuegos para TV, llamada “Brown Box”. En 1972 se lanza al mercado una versión perfeccionada con el nombre de “Magnavox Odyssey”, que tiene éxito moderado, lo que hizo que el proyecto se paralizara y no pasara a mayores." />
+           
+            
+            <p:graphicImage url="photos\5.jpg" width="200px" height="150px" />
+                <h:outputText
+                    value="En ese mismo año de 1972 nace Atari, la primera compañía dedicada exclusivamente a los videojuegos, la cual obtiene un éxito rotundo con Pong, un sencillo juego basado en el tenis que se convirtió en un punto de inflexión, pues el público comenzó a demandar más videojuegos sencillos como este, lo que fomentó la aparición de nuevas compañías similares a Atari en países como Japón, que entraron en la competencia. Por eso, 1974 es tradicionalmente considerado como el año de nacimiento de la industria de los videojuegos." />
+            
+            
+             <p:graphicImage url="photos\4.png" width="200px" height="150px" />
+                <h:outputText
+                    value="La consola Atari 2600 incluye el juego Space Invaders en exclusiva, logrando un rotundo éxito, y ya para la década de 1980 la industria de los videojuegos está en auge, con la participación en el mercado de grandes empresas como Warner Bros, Lucasfilm, 20th Century Fox o Walt Disney. En 1982, la industria del videojuego había facturado 5.313 millones de dólares, vendiendo prácticamente todo dentro de los Estados Unidos. En esta época nacieron juegos clásicos como Pacman y Donkey Kong." />
+            
+            
+            <p:graphicImage url="photos\6.jpeg" width="200px" height="150px" />
+                <h:outputText
+                    value="A principios de los años 90 las videoconsolas dieron un importante salto técnico gracias a la competición de la llamada generación de 16 bits compuesta por la Mega Drive, la Super Nintendo Entertainmet de Nintendo, la PC Engine de NEC, conocida como Turbografx en occidente y la CPS Changer de (Capcom)." />
+            
+            
+            <p:graphicImage url="photos\7.jpg" width="200px" height="150px" />
+                <h:outputText
+                    value="En el 2000 Sony lanzó la anticipada PlayStation 2 y Sega lanzó otra consola con las mismas características técnicas de la Dreamcast, nada más que venia con un monitor de 14 pulgadas, un teclado, altavoces y los mismos mandos llamados Dreamcast Drivers 2000 Series CX-1." />
+            
+            
+            <p:graphicImage url="photos\8.jpg" width="200px" height="150px" />
+                <h:outputText
+                    value="Microsoft entra en la industria de las consolas creando la Xbox en 2001." />
+            
+            
+           <p:graphicImage url="photos\9.jpg" width="200px" height="150px" />
+                <h:outputText
+                    value="Nintendo lanzó el sucesor de la Nintendo 64, la Gamecube, y la primera Game Boy completamente nueva desde la creación de la compañía, la Game Boy Advance. Sega viendo que no podría competir, especialmente con una nueva máquina como la de Sony, anunció que ya no produciría hardware, convirtiéndose sólo en desarrolladora de software en 2002." />
+         
+            
+           <p:graphicImage url="photos\10.jpg" width="200px" height="150px" />
+                <h:outputText
+                    value="El ordenador personal PC es la plataforma más cara de juegos pero también la que permite mayor flexibilidad. Esta flexibilidad proviene del hecho de poder añadir al ordenador componentes que se pueden mejorar constantemente, como son tarjetas gráficas o de sonido y accesorios como volantes, pedales y mandos, etc. Además es posible actualizar los juegos con parches oficiales o con nuevos añadidos realizados por la compañía que creó el juego o por otros usuarios." />
+            </h:panelGrid>             
+        </p:tab>
+        <p:tab title="Juegos más vendidos">
+            <h:panelGrid columns="2" cellpadding="10">
+                <p:graphicImage url="photos\21.jpg" width="200px" height="150px" />
+                <h:outputText value="Wii Sports (Wii スポーツ?) es un videojuego de deportes, desarrollado y producido por Nintendo como título de lanzamiento para la videoconsola Wii, y parte de la serie Touch! Generations. Fue lanzado en América del Norte junto con la consola el 19 de noviembre de 2006, y fue lanzado en Japón, Australia y Europa al mes siguiente. El juego viene incluido con la compra de la consola en todos los territorios excepto en Japón, haciéndolo el primer juego vendido en conjunto con el lanzamiento de una consola de Nintendo desde Mario's Tennis para Virtual Boy en 1995."/>
+                 
+                 <p:graphicImage url="photos\22.jpg" width="200px" height="150px" />
+                <h:outputText value="Super Mario Bros. 1985 Uno de los videojuegos más representativos de la empresa Nintendo, creado por Shigeru Miyamoto. El juego describe las aventuras de dos fontaneros (plomeros), Mario, quien ya había aparecido en otros videojuegos previos, tales como Donkey Kong y Mario Bros y Luigi; ambos deben rescatar a la Princesa Peach, del Reino Champiñón, que fue secuestrada por el rey de los koopas, Bowser. "></h:outputText>
+                
+                 <p:graphicImage url="photos\23.jpg" width="200px" height="150px" />
+                <h:outputText value="Mario Kart Wii (マリオカートWii Mario Kāto Wī?) es un videojuego de carreras desarrollado y distribuido por Nintendo para la consola Wii. Es la sexta entrega de la serie Mario Kart (sin contar dos juegos de arcade) y la segunda en usar la conexión Wi-Fi de Nintendo. El juego fue lanzado mundialmente en abril de 2008, aunque en Corea del Sur se lanzó un año después."></h:outputText>
+                 
+                <p:graphicImage url="photos\24.png" width="200px" height="150px" />
+                <h:outputText value="Wii Sports Resort es un videojuego deportivo para Wii. Es la continuación de Wii Sports, fue lanzado en Europa el 24 de julio de 2009 y en América el 26 de julio del mismo año. Este juego se debe usar el dispositivo Wii Motion Plus. El juego se vende en un pack con el Wii Motion Plus. Mientras que el juego fue lanzado originalmente sólo como un título independiente, a partir de 2009 el juego es incluido con las nuevas consolas Wii, junto con Wii Sports."></h:outputText>
+                 
+                <p:graphicImage url="photos\25.jpg" width="200px" height="150px" />
+                <h:outputText value="Pokémon Red Version; Pokémon Blue Version, son dos videojuegos de rol desarrollados por Game Freak y publicados por Nintendo para su consola portátil Game Boy. Son las primeras entregas de la serie de videojuegos de la franquicia Pokémon. Los videojuegos fueron lanzados a la venta por primera vez en Japón, durante 1996, y en Estados Unidos, Europa y Australia casi tres años después. Pokémon Yellow, una versión especial, fue lanzada al mercado aproximadamente un año más tarde. Los videojuegos fueron rehechos con posterioridad para la consola Game Boy Advance bajo el título de Pokémon FireRed y LeafGreen y publicados en 2004."></h:outputText> 
+                 
+                 </h:panelGrid>
+        </p:tab>
+        
+    </p:accordionPanel>
+    
+    </h:form>
+	  </p:panel>
+	  
+	  
+	  
+	  </h:body>
+</html>

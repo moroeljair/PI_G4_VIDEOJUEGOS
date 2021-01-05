@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+	     <title>Registro</title>
+	  </h:head>
+	
+	<h:body>
+	
+	<h:form>
+	      <p:panel id="registrationform" header="Registro">
+	          <h:panelGrid columns="3">
+	          
+	              <p:outputLabel for="txtNombre" value="Nombre" />
+	              <p:inputText id="txtNombre" required="true" value="#{persona.nombre}" requiredMessage="Digite su nombre">
+	                <p:ajax update="txtNombreMsg" event="keyup"/>
+	              </p:inputText>  
+	              <p:message id="txtNombreMsg" for="txtNombre" />
+	              
+	              <p:outputLabel for="txtEdad" value="Edad" />
+	              <p:inputText id="txtEdad" required="true" value="#{persona.edad}" requiredMessage="Digite su edad"
+	              validatorMessage="Para registrarte tienes que ser mayor de edad">
+	                <f:validateLongRange minimum="18" maximum="100"/>
+	                <p:ajax update="txtEdadMsg" event="keyup"/>
+	              </p:inputText>
+	              <p:message id="txtEdadMsg" for="txtEdad"/> 
+	              
+	              <p:outputLabel for="txtDireccion" value="País" />
+	              <p:inputText id="txtDireccion" required="true" value="#{persona.direccion}" requiredMessage="Digite su direccion">
+	                <p:ajax update="txtDireccionMsg" event="keyup"/>
+	              </p:inputText>
+	              <p:message id="txtDireccionMsg" for="txtDireccion"/> 
+	              
+	              
+	              <p:outputLabel for="estadoCivil" value="Estado Civil" />
+	              <p:selectOneRadio id="estadoCivil" value="#{persona.estadoCivil}" unselectable="true">
+	                   <f:selectItem itemLabel="soltero" itemValue="soltero" />
+		               <f:selectItem itemLabel="casado" itemValue="casado" />
+		               <f:selectItem itemLabel="divorciado" itemValue="divorciado" />
+	              </p:selectOneRadio>
+	              <p:outputLabel value=""></p:outputLabel>
+	              
+	              <p:outputLabel for="consola" value="Consola Favorita" />
+	              <p:selectOneMenu id="consola" value="#{persona.ciudadNacimiento}">
+	              	    <f:selectItem itemValue="PS3" itemLabel="PS3"/>
+						<f:selectItem itemValue="WI" itemLabel="WI"/>
+						<f:selectItem itemValue="Nintendo" itemLabel="Nintendo"/>
+						<f:selectItem itemValue="Xbox" itemLabel="Xbox"/>
+						
+	              </p:selectOneMenu>
+	              <p:outputLabel value=""></p:outputLabel>	              
+	              
+	              
+	              <p:outputLabel for="txtCorreo" value="Correo" />
+	              <p:inputText  id="txtCorreo" required="true" value="#{persona.correo}" 
+	                requiredMessage="Digite su correo electronico" validatorMessage="Tiene que ser un correo electronico">
+	                <f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]"/>
+	                <p:ajax update="txtCorreoMsg" event="keyup"/>
+	              </p:inputText>
+	              <p:message id="txtCorreoMsg" for="txtCorreo"/> 
+	              
+	              
+	              <p:outputLabel for="txtClave" value="Clave" />
+	              <p:inputText  id="txtClave" required="true" value="#{persona.clave}"
+	                requiredMessage="Digite su clave" validatorMessage="La clave es 2 numeros y 6 letras">
+	                <f:validateRegex pattern="([0-9]{2})([A-Za-z]{6})"/>
+	                <p:ajax update="txtClaveMsg" event="keyup"/>
+	              </p:inputText>
+	              <p:message id="txtClaveMsg" for="txtClave"/> 
+	             
+	              
+	              <p:outputLabel value=""></p:outputLabel>
+	              <p:commandButton action="#{persona.registrar()}" value="Registrar" update="registrationform"></p:commandButton>
+	              <p:outputLabel value=""></p:outputLabel>
+	                
+	          </h:panelGrid>
+	      </p:panel>
+    </h:form>
+	
+	</h:body>
+	
+</html>
